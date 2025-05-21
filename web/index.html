@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Welcome to EduSync Web Application</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        /* Reset default margins */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(to right, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.5)),
+                        url('https://images.unsplash.com/photo-1523240795612-9a054b0db644?auto=format&fit=crop&w=1470&q=80') no-repeat center center/cover;
+            color: white;
+            min-height: 100vh;
+        }
+
+        header {
+            background-color: rgba(0, 0, 0, 0.6);
+            padding: 15px 40px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        header h1 {
+            font-size: 2em;
+            color: #f5f5f5;
+        }
+
+        nav {
+            position: relative;
+        }
+
+        nav:hover .dropdown-content {
+            display: block;
+            animation: fadeIn 0.5s ease-in-out;
+        }
+
+        nav .dropdown-btn {
+            cursor: pointer;
+            font-size: 1em;
+            padding: 10px;
+            background: none;
+            color: #fff;
+            border: none;
+        }
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            right: 0;
+            background-color: rgba(0, 0, 0, 0.9);
+            min-width: 250px;
+            box-shadow: 0 8px 16px rgba(0,0,0,0.4);
+            border-radius: 8px;
+            padding: 15px;
+        }
+
+        .dropdown-content p {
+            color: #ddd;
+            font-size: 0.95em;
+            margin-bottom: 10px;
+        }
+
+        main {
+            text-align: center;
+            padding: 100px 30px;
+        }
+
+        .main-heading {
+            font-size: 3em;
+            margin-bottom: 20px;
+            animation: fadeInUp 1s ease-in-out;
+        }
+
+        .description {
+            font-size: 1.4em;
+            max-width: 900px;
+            margin: 0 auto 50px;
+            line-height: 1.6;
+            animation: fadeInUp 1.2s ease-in-out;
+        }
+
+        .button-container {
+            animation: fadeInUp 1.4s ease-in-out;
+        }
+
+        .btn {
+            display: inline-block;
+            background-color: white;
+            color: #4e54c8;
+            text-decoration: none;
+            padding: 15px 35px;
+            margin: 15px;
+            font-size: 1.1em;
+            font-weight: bold;
+            border-radius: 10px;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s, box-shadow 0.3s, background-color 0.3s;
+        }
+
+        .btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 12px 25px rgba(0, 0, 0, 0.3);
+            background-color: #e0e0ff;
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>EduSync</h1>
+        <nav>
+            <button class="dropdown-btn">More Info ▼</button>
+            <div class="dropdown-content">
+                <p><strong>Contact:</strong> support@edusync.com | +65 685 2622</p>
+                <p><strong>Why EduSync?</strong> This app was built to bridge the gap between students and tutors by offering a centralized platform for managing consultations, sharing academic resources, and improving student support systems. It encourages collaborative learning and better access to study materials anytime, anywhere.</p>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <h2 class="main-heading">Empowering Students Through Smart Learning</h2>
+        <p class="description">
+            EduSync is your academic companion – helping students connect with tutors, manage their modules, and access academic content with ease. Whether you're booking a consultation, uploading material, or asking tough questions — EduSync supports your success.
+        </p>
+
+        <div class="button-container">
+            <a href="login.jsp" class="btn">Login</a>
+            <a href="signup.jsp" class="btn">Sign Up</a>
+        </div>
+    </main>
+</body>
+</html>
